@@ -76,3 +76,9 @@ if __name__ == '__main__':
     list5 = [1,1,1,3,3,4,3,2,4,2]
     print(list5)
     print('Result: ', test.containsDuplicate(list5), '\n')
+
+    # ========== Test 6: Duplicates at the end ==========
+    print('Test 6: Duplicates at the end')
+    list6 = [4, 3, 6, 1, 2, 5, 5]
+    print(list6)
+    print('Result: ', test.containsDuplicate(list6), '\n')
