@@ -33,6 +33,14 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
+        numsLength = len(nums)
+        if (numsLength <= 1):
+            return False
+        for i in range(numsLength-1):
+            for j in range(i+1, numsLength):
+                if nums[i] == nums[j]:
+                    return True
+        return False
 
 
 if __name__ == '__main__':
