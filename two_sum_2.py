@@ -44,6 +44,16 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
+        numsLength = len(nums)
+        valueIndexMap = {}
+        for i in range(numsLength):
+            difference = target - nums[i]
+            if difference in valueIndexMap:
+                j = valueIndexMap[difference]
+                if i < j:
+                    return [i, j]
+                return [j, i]
+            valueIndexMap[nums[i]] = i
 
 
 if __name__ == '__main__':
