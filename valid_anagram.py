@@ -35,6 +35,30 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        charCount1 = {}
+        for char in s:
+            if char not in charCount1:
+                charCount1[char] = 1
+            else:
+                charCount1[char]+=1
+
+        charCount2 = {}
+        for char in t:
+            if char not in charCount2:
+                charCount2[char] = 1
+            else:
+                charCount2[char]+=1
+
+        if len(charCount1) != len(charCount2):
+            return False
+
+        for char in charCount1:
+            if char not in charCount2:
+                return False
+            if charCount1[char] != charCount2[char]:
+                return False
+
+        return True
 
 
 if __name__ == '__main__':
